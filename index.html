@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucky 777 Gaming</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #080e16;
+  color: white;
+}
+
+header {
+  background: #101b2a;
+  padding: 18px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #20d878;
+}
+
+.logo {
+  color: #20e786;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #42a5ff;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login {
+  background: #172b40;
+  color: white;
+  border: 1px solid #42a5ff;
+}
+
+.hero {
+  margin: 20px 15px;
+  padding: 32px 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #064d32, #123b70, #101722);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #d5e5f6;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.primary {
+  background: #20d878;
+  color: #06140d;
+}
+
+section {
+  padding: 15px;
+}
+
+h2 {
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+.balance {
+  background: #111e2d;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #263b50;
+  margin-bottom: 20px;
+}
+
+.balance p {
+  color: #a8bed2;
+  margin-bottom: 10px;
+}
+
+.balance h3 {
+  font-size: 27px;
+  color: #20e786;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+.secondary {
+  background: #172b40;
+  color: #72baff;
+  border: 1px solid #284e72;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.game {
+  background: #111e2d;
+  border: 1px solid #263b50;
+  border-radius: 12px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 39px;
+  margin-bottom: 12px;
+}
+
+.game h3 {
+  margin-bottom: 8px;
+}
+
+.game p {
+  color: #9bb2c8;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.play {
+  width: 100%;
+  background: #173c35;
+  color: #45ed9a;
+}
+
+.notice {
+  color: #9bb2c8;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 20px;
+  padding: 14px;
+  background: #111e2d;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 12px;
+  color: #8298ad;
+  font-size: 13px;
+  margin-top: 15px;
+  border-top: 1px solid #263b50;
+}
+
+a {
+  color: #42a5ff;
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LUCKY <span>777</span></div>
+  <button class="login" onclick="demo('Login')">Login / Join</button>
+</header>
+
+<div class="hero">
+  <h1>Welcome to Lucky 777</h1>
+  <p>Your gaming destination.<br>
+  Discover games and enjoy the experience!</p>
+  <button class="primary" onclick="showGames()">Explore Games</button>
+</div>
+
+<section>
+  <h2>👤 My Account</h2>
+
+  <div class="balance">
+    <p>Demo Account Balance</p>
+    <h3>Rs. 0</h3>
+
+    <div class="actions">
+      <button class="primary" onclick="demo('Deposit')">Deposit</button>
+      <button class="secondary" onclick="demo('Withdrawal')">Withdrawal</button>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <h2>🎮 Popular Games</h2>
+
+  <div class="games">
+
+    <div class="game">
+      <div class="icon">🎯</div>
+      <h3>Lucky Target</h3>
+      <p>Casual game demo</p>
+      <button class="play" onclick="demo('Lucky Target')">Play Demo</button>
+    </div>
+
+    <div class="game">
+      <div class="icon">🧩</div>
+      <h3>Brain Puzzle</h3>
+      <p>Challenge your mind</p>
+      <button class="play" onclick="demo('Brain Puzzle')">Play Demo</button>
+    </div>
+
+    <div class="game">
+      <div class="icon">🎲</div>
+      <h3>Lucky Dice</h3>
+      <p>Dice game preview</p>
+      <button class="play" onclick="demo('Lucky Dice')">Play Demo</button>
+    </div>
+
+    <div class="game">
+      <div class="icon">🏆</div>
+      <h3>Daily Challenge</h3>
+      <p>Fun challenges</p>
+      <button class="play" onclick="demo('Daily Challenge')">Play Demo</button>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>Demo Website</strong><br>
+    This is an initial front-end preview. Accounts, payments,
+    withdrawals, and administrative controls are not connected
+    to a real backend.
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lucky 777 Gaming</p>
+  <p style="margin-top:10px">
+    <a href="#" onclick="demo('Admin Panel'); return false;">Admin Panel Preview</a>
+  </p>
+</footer>
+
+<script>
+function demo(feature) {
+  alert(feature + " is a demo feature. Backend setup is required.");
+}
+
+function showGames() {
+  document.getElementById("games").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
+  </html>
